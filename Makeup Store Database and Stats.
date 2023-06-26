@@ -1,6 +1,5 @@
 -- Create a makeup products database 
 
-  
 
 CREATE TABLE makeup (id INTEGER, item TEXT, section TEXT, quantity INTEGER, price INTEGER); 
 
