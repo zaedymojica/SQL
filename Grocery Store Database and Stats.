@@ -1,0 +1,49 @@
+-- Create a makeup products database 
+
+  
+
+CREATE TABLE makeup (id INTEGER, item TEXT, section TEXT, quantity INTEGER, price INTEGER); 
+
+  
+
+INSERT INTO makeup VALUES (1, "blush", "cheeks", 50, 5.99); 
+INSERT INTO makeup VALUES (2, "lipstick", "lips", 100, 8.99); 
+INSERT INTO makeup VALUES (3, "eyeliner", "eyes", 80, 5.99); 
+INSERT INTO makeup VALUES (4, "foundation", "face", 60, 25.99); 
+INSERT INTO makeup VALUES (5, "lip gloss", "lips", 100, 7.99); 
+INSERT INTO makeup VALUES (6, "concealer", "face", 65, 8.99); 
+INSERT INTO makeup VALUES (7, "eyeshadow", "eyes", 50, 9.99); 
+INSERT INTO makeup VALUES (8, "lipliner", "lips", 100, 5.99); 
+INSERT INTO makeup VALUES (9, "primer", "face", 40, 10.99); 
+INSERT INTO makeup VALUES (10, "bronzer", "face", 70, 12.99); 
+INSERT INTO makeup VALUES (11, "powder", "face", 70, 15.99); 
+INSERT INTO makeup VALUES (12, "setting spray", 50, 12.99); 
+INSERT INTO makeup VALUES (13, "mascara", "eyes", 100, 9.99); 
+INSERT INTO makeup VALUES (14, "eyebrow pencil", "brows", 90, 5.99); 
+INSERT INTO makeup VALUES (15, "highlighter", "cheeks", 60, 7.99); 
+
+  
+--display the database ordered by price. 
+
+SELECT * FROM makeup  
+ORDER BY price desc; 
+
+  
+
+--what is the average price of makeup items? 
+
+SELECT AVG(price) FROM makeup; 
+
+  
+
+--what is the average price of items in the face section? 
+
+SELECT AVG(price) "avg face item price"  
+FROM makeup  
+WHERE section='face'; 
+
+  
+
+--what is the total quantity of make up items? 
+
+SELECT SUM(quantity) FROM makeup; 
